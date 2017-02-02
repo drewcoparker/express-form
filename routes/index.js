@@ -27,7 +27,6 @@ router.get('/', function(req, res, next) {
 
 router.post('/search-records', (req, res, next) => {
     var nameSubmitted = req.body.studentSearch;
-    var flag = false;
     var msg = `You are not in the class ${nameSubmitted}`;
     for (let student of students) {
         if (nameSubmitted.toLowerCase() === student.toLowerCase()) {
